@@ -6,7 +6,7 @@ export default function Home() {
         <div className="bg-gray-950 min-h-screen text-white">
             {/* Header inline */}
 
-            <Header></Header>
+            <Header is_login={true}/>
             <main className="mx-auto w-[1200px] px-6">
                 {/* Hero Section */}
                 <section
