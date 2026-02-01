@@ -49,7 +49,7 @@ export default function Login() {
             <Input type="email" placeholder="Email" />
             <Input type="password" placeholder="Senha" />
           </div>
-          <div className="flex mt-8 justify-between text-xs sm:text-sm text-white font-bold">
+          <div className="flex mb-5 mt-8 justify-between text-xs sm:text-sm text-white font-bold">
             <Link to="/create-account" className="cursor-pointer hover:underline">Não tem uma conta?</Link>
             <Link to="/login" className="cursor-pointer hover:underline">Esqueceu a senha?</Link>
           </div>

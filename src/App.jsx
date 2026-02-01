@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Header from "./components/Header";
 import Login from "./pages/Login";
 import CreateAccount from "./pages/CreateAccount";
+import Manage from "./pages/Manage";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/create-account" element={<CreateAccount />} />
+        <Route path="/manage" element={<Manage />} />
       </Routes>
     </>
   );

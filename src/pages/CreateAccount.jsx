@@ -47,7 +47,7 @@ export default function CreateAccount() {
           </div>
 
           {/* Form */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 mb-3">
             <Input type="text" placeholder="Nome" />
             <Input type="email" placeholder="Email" />
             <Input type="password" placeholder="Senha" />
