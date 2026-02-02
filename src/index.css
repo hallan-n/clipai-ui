@@ -139,22 +139,22 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #1f1f1f; /* cor do “fundo” da barra */
+  background: #7A2582; /* cor do “fundo” da barra */
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #912D9A; /* cor do “dedo” */
+  background-color: #7A2582; /* cor do “dedo” */
   border-radius: 6px;
-  border: 2px solid #1f1f1f; /* cria espaço ao redor do thumb */
+  border: 2px solid #7A2582; /* cria espaço ao redor do thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #912D9A; /* hover do dedo */
+  background-color: #7A2582; /* hover do dedo */
 }
 
 /* Firefox */
 * {
   scrollbar-width: thin;          /* thin scrollbar */
-  scrollbar-color: #912D9A #1f1f1f; /* thumb e track */
+  scrollbar-color: #7A2582 #9D33A7; /* thumb e track */
 }

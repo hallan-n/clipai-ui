@@ -1,6 +1,4 @@
-import { PlusIcon, SymbolIcon } from "@radix-ui/react-icons";
 import SourceItem from "@/components/SourceItem";
-import Button from "@/components/Button";
 import {
   Tabs,
   TabsList,
@@ -26,6 +24,8 @@ import {
 } from "@/components/ui/select";
 
 import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Plus, RefreshCw } from "lucide-react";
 
 export default function Manage() {
   const [channels, setChannels] = useState([]);
@@ -89,15 +89,15 @@ export default function Manage() {
           <h1 className="text-white text-2xl font-bold mb-4">Mudar de canal</h1>
           <div className="flex gap-4">
             <Select value={selected} onValueChange={setSelected}>
-              <SelectTrigger className="w-full bg-primary-6 border-none rounded-lg h-20 px-6">
+              <SelectTrigger className="h-15 cursor-pointer text-white font-bold w-full bg-primary-6 border-none rounded-lg px-6">
                 <SelectValue className="text-white font-bold" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="bg-primary-5 border-none p-2">
                 {channels.map((item, index) => (
                   <SelectItem
                     key={item.id}
                     value={index.toString()}
-                    className="font-bold text-black p-4 px-6 rounded-lg"
+                    className="cursor-pointer font-bold text-white hover:text-black hover:bg-amber-700 p-4 px-6 rounded-lg"
                   >
                     {item.login}
                   </SelectItem>
@@ -105,8 +105,8 @@ export default function Manage() {
               </SelectContent>
             </Select>
 
-            <Button text="Adicionar um canal" icon={<PlusIcon />} />
-            <Button text="Adicionar fonte" icon={<PlusIcon />} />
+            <Button className="w-full h-15"><Plus />Adicionar um canal</Button>
+            <Button className="w-full h-15"><Plus />Adicionar fonte</Button>
           </div>
         </section>
 
@@ -169,7 +169,7 @@ export default function Manage() {
                               <TableCell className="text-primary-1">{video.duration}</TableCell>
                               <TableCell className="text-primary-1">
                                 <div className="flex items-center justify-center rounded-lg cursor-pointer hover:text-primary-6 hover:bg-primary-1 w-8 h-8">
-                                  <SymbolIcon />
+                                  <RefreshCw />
                                 </div>
                               </TableCell>
                             </TableRow>

@@ -1,7 +1,7 @@
-import { GitHubLogoIcon, DiscordLogoIcon } from "@radix-ui/react-icons";
 import { Link } from "react-router-dom";
-import Input from "../components/Input";
-import Button from "../components/Button";
+import { Button } from "@/components/ui/button";
+import { Github } from "lucide-react";
+import { Input } from "@/components/ui/input";
 
 export default function Login() {
 
@@ -15,14 +15,14 @@ export default function Login() {
 
           <div className="flex gap-2 sm:gap-3 justify-center">
             <div className="flex items-center rounded-lg p-2 sm:p-3 md:p-4 gap-2 sm:gap-3 bg-primary-4 hover:bg-primary-3 transition cursor-pointer">
-              <GitHubLogoIcon className="size-4 sm:size-5 md:size-6 text-black" />
+              <Github className="size-4 sm:size-5 md:size-6 text-black" />
               <p className="text-xs sm:text-sm md:text-base text-white font-bold">
                 GitHub
               </p>
             </div>
 
             <div className="flex items-center rounded-lg p-2 sm:p-3 md:p-4 gap-2 sm:gap-3 bg-primary-4 hover:bg-primary-3 transition cursor-pointer">
-              <DiscordLogoIcon className="size-4 sm:size-5 md:size-6 text-black" />
+              <Github className="size-4 sm:size-5 md:size-6 text-black" />
               <p className="text-xs sm:text-sm md:text-base text-white font-bold">
                 Discord
               </p>
@@ -30,7 +30,7 @@ export default function Login() {
 
 
             <div className="flex items-center rounded-lg p-2 sm:p-3 md:p-4 gap-2 sm:gap-3 bg-primary-4 hover:bg-primary-3 transition cursor-pointer">
-              <DiscordLogoIcon className="size-4 sm:size-5 md:size-6 text-black" />
+              <Github className="size-4 sm:size-5 md:size-6 text-black" />
               <p className="text-xs sm:text-sm md:text-base text-white font-bold">
                 Discord
               </p>
@@ -42,18 +42,16 @@ export default function Login() {
             <p className="text-center text-white font-bold">OU</p>
             <hr className="w-full border-1 border-white" />
           </div>
-
-          {/* Form */}
           <div className="flex flex-col gap-3">
 
-            <Input type="email" placeholder="Email" />
-            <Input type="password" placeholder="Senha" />
+            <Input className="border-none bg-primary-5 p-6 text-primary-1 placeholder:text-primary-1" type="email" placeholder="Email" />
+            <Input className="border-none bg-primary-5 p-6 text-primary-1 placeholder:text-primary-1" type="password" placeholder="Senha" />
           </div>
           <div className="flex mb-5 mt-8 justify-between text-xs sm:text-sm text-white font-bold">
             <Link to="/create-account" className="cursor-pointer hover:underline">Não tem uma conta?</Link>
             <Link to="/login" className="cursor-pointer hover:underline">Esqueceu a senha?</Link>
           </div>
-          <Button text="Entrar" />
+          <Button variant="default" className="w-full p-6">Entrar</Button>
         </div>
       </div>
     </div>

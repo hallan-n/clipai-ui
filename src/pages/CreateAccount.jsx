@@ -1,8 +1,16 @@
-import { GitHubLogoIcon, DiscordLogoIcon, ArrowRightIcon, EyeClosedIcon, EyeOpenIcon } from "@radix-ui/react-icons";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Github } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Input from "../components/Input";
-import Button from "../components/Button";
+
+
+
+
+
+
+
+
 
 export default function CreateAccount() {
 
@@ -18,14 +26,14 @@ export default function CreateAccount() {
 
           <div className="flex gap-2 sm:gap-3 justify-center">
             <div className="flex items-center rounded-lg p-2 sm:p-3 md:p-4 gap-2 sm:gap-3 bg-primary-4 hover:bg-primary-3 transition cursor-pointer">
-              <GitHubLogoIcon className="size-4 sm:size-5 md:size-6 text-black" />
+              <Github className="size-4 sm:size-5 md:size-6 text-black" />
               <p className="text-xs sm:text-sm md:text-base text-white font-bold">
                 GitHub
               </p>
             </div>
 
             <div className="flex items-center rounded-lg p-2 sm:p-3 md:p-4 gap-2 sm:gap-3 bg-primary-4 hover:bg-primary-3 transition cursor-pointer">
-              <DiscordLogoIcon className="size-4 sm:size-5 md:size-6 text-black" />
+              <Github className="size-4 sm:size-5 md:size-6 text-black" />
               <p className="text-xs sm:text-sm md:text-base text-white font-bold">
                 Discord
               </p>
@@ -33,7 +41,7 @@ export default function CreateAccount() {
 
 
             <div className="flex items-center rounded-lg p-2 sm:p-3 md:p-4 gap-2 sm:gap-3 bg-primary-4 hover:bg-primary-3 transition cursor-pointer">
-              <DiscordLogoIcon className="size-4 sm:size-5 md:size-6 text-black" />
+              <Github className="size-4 sm:size-5 md:size-6 text-black" />
               <p className="text-xs sm:text-sm md:text-base text-white font-bold">
                 Discord
               </p>
@@ -46,14 +54,14 @@ export default function CreateAccount() {
             <hr className="w-full border-1 border-white" />
           </div>
 
-          {/* Form */}
+          
           <div className="flex flex-col gap-3 mb-3">
             <Input type="text" placeholder="Nome" />
             <Input type="email" placeholder="Email" />
             <Input type="password" placeholder="Senha" />
 
           </div>
-          <Button text="Criar sua conta" />
+          <Button className="w-full p-6 mt-4">Criar sua conta</Button>
           <div className="mt-5 flex justify-center">
             <Link to="/login" className="text-xs sm:text-sm text-white font-bold cursor-pointer hover:underline">Já tem uma conta?</Link>
           </div>
