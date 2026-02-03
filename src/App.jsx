@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Login from "./pages/Login";
 import CreateAccount from "./pages/CreateAccount";
 import Manage from "./pages/Manage";
-import Add from "./pages/Add";
+import ProcessVideo from "./pages/ProcessVideo";
 
 export default function App() {
   return (
@@ -15,7 +15,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/create-account" element={<CreateAccount />} />
         <Route path="/manage" element={<Manage />} />
-        <Route path="/add" element={<Add />} />
+        <Route path="/proccess" element={<ProcessVideo />} />
       </Routes>
     </>
   );

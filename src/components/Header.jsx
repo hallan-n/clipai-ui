@@ -68,9 +68,9 @@ export default function Header() {
               <DropdownMenuItem><Link to="/login">Login</Link></DropdownMenuItem>
               <DropdownMenuItem><Link to="/create-account">Criar conta</Link></DropdownMenuItem>
               <DropdownMenuItem><Link to="/manage">Gerenciar</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link to="/proccess">Processar video</Link></DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu> : <Link to="/login"><Button variant="default" size="sm">Entrar</Button></Link>}
-          {/* {"" ? access_token : <Link to="/login"><Button variant="default" size="sm">Entrar</Button></Link>} */}
         </div>
 
       </div>
