@@ -44,8 +44,8 @@ export default function Login() {
           </div>
           <div className="flex flex-col gap-3">
 
-            <Input className="border-none bg-primary-5 p-6 text-primary-1 placeholder:text-primary-1" type="email" placeholder="Email" />
-            <Input className="border-none bg-primary-5 p-6 text-primary-1 placeholder:text-primary-1" type="password" placeholder="Senha" />
+            <Input type="email" placeholder="Email" />
+            <Input type="password" placeholder="Senha" />
           </div>
           <div className="flex mb-5 mt-8 justify-between text-xs sm:text-sm text-white font-bold">
             <Link to="/create-account" className="cursor-pointer hover:underline">Não tem uma conta?</Link>

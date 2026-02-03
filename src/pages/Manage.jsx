@@ -26,6 +26,8 @@ import {
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Plus, RefreshCw } from "lucide-react";
+import AddSource from "@/components/AddSource";
+import AddChannel from "@/components/AddChannel";
 
 export default function Manage() {
   const [channels, setChannels] = useState([]);
@@ -97,16 +99,18 @@ export default function Manage() {
                   <SelectItem
                     key={item.id}
                     value={index.toString()}
-                    className="cursor-pointer font-bold text-white hover:text-black hover:bg-amber-700 p-4 px-6 rounded-lg"
+                    className="cursor-pointer font-bold text-white hover:text-black p-4 px-6 rounded-lg"
                   >
                     {item.login}
                   </SelectItem>
                 ))}
               </SelectContent>
             </Select>
+          
+            <AddChannel />
 
-            <Button className="w-full h-15"><Plus />Adicionar um canal</Button>
-            <Button className="w-full h-15"><Plus />Adicionar fonte</Button>
+            <AddSource />          
+            
           </div>
         </section>
 

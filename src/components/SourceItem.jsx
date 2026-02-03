@@ -19,7 +19,7 @@ export default function SourceItem({ name, username }) {
         </div>
       </div>
 
-      <div className="p-2 rounded-lg hover:bg-primary-3 text-primary-2 hover:text-primary-6">
+      <div className="cursor-pointer p-2 rounded-lg hover:bg-primary-3 text-primary-2 hover:text-primary-6">
         <TrashIcon className="size-7" />
       </div>
     </button>
