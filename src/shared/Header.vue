@@ -19,14 +19,18 @@ function toggleProfile(): void {
 
 function logOut(): void {
     auth.logout()
-    router.push('/')
+    router.push('/login')
 }
 </script>
 
 <template>
     <header class="bg-violet-600">
         <nav class="mx-auto container flex items-center justify-between max-w-4xl w-full p-4">
-            <ul class="hidden md:flex">
+            <div class="flex items-center gap-3">
+                <router-link to="/">
+                    <img class="scale-75" src="../assets/favicon.svg" alt="">
+                </router-link>
+                <ul class="hidden md:flex">
                 <li>
                     <router-link to="/">
                         <Button color="secondary">Home</Button>
@@ -65,14 +69,17 @@ function logOut(): void {
                     </ul>
                 </div>
             </div>
+        </div>
             <div class="flex cursor-pointer" @click="toggleProfile">
-                <div class="w-8 h-8 bg-amber-600 rounded-full"></div>
-                <div class="absolute top-14 right-4 rounded-lg bg-violet-800" v-if="isProfileOpen">
-                    <ul class="relative p-1">
-                        <li>
-                            <Button color="secondary" @click="logOut">Sair</Button>
-                        </li>
-                    </ul>
+                <div class="w-8 h-8 bg-violet-800 rounded-full"></div>
+                <div class="absolute top-14">
+                    <div class="absolute -right-8 rounded-lg bg-violet-800" v-if="isProfileOpen">
+                        <ul class="relative p-1">
+                            <li>
+                                <Button class="w-full" color="secondary" @click="logOut">Sair</Button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
